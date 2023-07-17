@@ -2,6 +2,7 @@
 :root{
   --primary:#EA625C;
   --text-color:#333;
+  --primary-dark:#C9514C;
 }
 
 /* GLOBAL */
@@ -48,7 +49,27 @@ img{
  margin-right: auto;
 }
 
+/* BUTTON */
+.button{
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 12px 38px;
+  border:0;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: bold;
+  transition: background-color .4s ease;
+}
 
+.button:hover{
+  background-color: var(--primary-dark);
+}
+.button:active{
+  opacity: 0.6;
+}
 /* MAIN-CONTENT */
 .main-content{
   flex-grow:1;
@@ -121,4 +142,50 @@ img{
   padding-top: 6px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--text-color);
+}
+
+
+/* HERO */
+.hero {
+ border-bottom: 2px solid #ddd;
+ padding-bottom: 185px;
+ padding-top: 140px;
+ background-image: url("../img/intro-bg.jpg");
+ background-repeat: no-repeat;
+ background-position:left calc(50% + 445px) bottom ;
+
+}
+
+.lead-cta {
+  width: 100%;
+  max-width: 490px;
+}
+.lead-cta-heading {
+ margin-top:0;
+ margin-bottom: 30px;
+ font-size: 50px;
+ line-height: 1,2;
+ color: #000;
+}
+
+.lead-cta-text {
+  border-left:3px solid #888;
+  padding-left:37px;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+ .hero{
+  background-image: url("../img/intro-bg@2x.jpg");
+ }
 }
